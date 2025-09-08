@@ -3,10 +3,12 @@
 
 using namespace std;
 
-Color MidnightBlue = Color{ 25, 25, 112, 255 };
-Color DeepBlue = Color{ 25, 50, 112, 255 };
-Color SkyBlue = Color{ 51, 153, 255, 255 };
-Color OpticYellow = Color{ 204, 255, 0, 255 };
+Color BackgroundDark   = Color{ 10, 10, 30, 255 };
+Color SidePanelDark    = Color{ 20, 20, 50, 255 };
+Color NeonCyan         = Color{ 0, 255, 200, 255 };
+Color NeonMagenta      = Color{ 255, 50, 180, 255 };
+Color NeonPurple       = Color{ 150, 80, 255, 255 };
+Color SoftWhite        = Color{ 240, 240, 255, 255 };
 
 int player_score = 0;
 int cpu_score = 0;
@@ -18,7 +20,7 @@ public:
     int radius;
 
     void Draw() {
-        DrawCircle(x, y, radius, OpticYellow);
+        DrawCircle(x, y, radius, NeonMagenta);
     }
     
     void ResetBall() {
@@ -57,7 +59,7 @@ public:
     int speed;
 
     void Draw() {
-        DrawRectangleRounded(Rectangle{x, y, width, height}, 0.8, 0, WHITE);
+        DrawRectangleRounded(Rectangle{x, y, width, height}, 0.8, 0, NeonCyan);
     }
 
     void Update() {
@@ -131,15 +133,15 @@ int main () {
         }
 
         //Drawing
-        ClearBackground(MidnightBlue);
-        DrawRectangle(screen_width/2, 0, screen_width/2, screen_height, DeepBlue);
-        DrawCircle(screen_width/2, screen_height/2, 150, SkyBlue);
-        DrawLine(screen_width/2, 0, screen_width/2, screen_height, WHITE);
+        ClearBackground(BackgroundDark);
+        DrawRectangle(screen_width/2, 0, screen_width/2, screen_height, SidePanelDark);
+        DrawCircle(screen_width/2, screen_height/2, 150, NeonPurple);
+        DrawLine(screen_width/2, 0, screen_width/2, screen_height, SoftWhite);
         ball.Draw();
         cpu.Draw();
         player.Draw();
-        DrawText(TextFormat("%i", cpu_score), screen_width/4 - 20, 20, 80, WHITE);
-        DrawText(TextFormat("%i", player_score), 3 * screen_width/4 - 20, 20, 80, WHITE);
+        DrawText(TextFormat("%i", cpu_score), screen_width/4 - 20, 20, 80, SoftWhite);
+        DrawText(TextFormat("%i", player_score), 3 * screen_width/4 - 20, 20, 80, SoftWhite);
 
         EndDrawing();
     }

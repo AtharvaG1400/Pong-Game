@@ -9,6 +9,12 @@ A simple Pong game implemented in C++ using [raylib](https://www.raylib.com/).
 - Smooth paddle and ball movement
 - Score tracking
 
+## Gameplay Screenshots
+
+Below is a screenshot of the game in action:
+
+![Gameplay Screenshot](screenshot.png)
+
 ## Requirements
 
 - [raylib](https://www.raylib.com/) library
@@ -18,7 +24,7 @@ A simple Pong game implemented in C++ using [raylib](https://www.raylib.com/).
 
 1. **Clone the repository:**
    ```sh
-   git clone https://github.com/yourusername/pong.git
+   git clone https://github.com/AtharvaG1400/pong.git
    cd pong
    ```
 
